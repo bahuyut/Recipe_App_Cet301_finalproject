@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <_PostProcessingItem Include="RecipeApp.app/Contents/MacOS/RecipeApp">
+      <BCSymbolMapName>RecipeApp.bcsymbolmap</BCSymbolMapName>
+      <NoDSymUtil>true</NoDSymUtil>
+      <dSYMSourcePathExists>false</dSYMSourcePathExists>
+      <NoSymbolStrip>true</NoSymbolStrip>
+      <dSYMInfoPlistRelativePath>RecipeApp.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
+      <SymbolFile>/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/mtouch-symbols.list</SymbolFile>
+      <DSymName>RecipeApp.app.dSYM</DSymName>
+      <SourceProjectPath>/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp</SourceProjectPath>
+    </_PostProcessingItem>
+  </ItemGroup>
+</Project>

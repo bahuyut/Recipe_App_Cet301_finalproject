@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipeApp.Screens.Main"
+             Title="Main">
+    <StackLayout>
+        <!-- SearchBar -->
+        <SearchBar x:Name="searchBar" Placeholder="Ara..." BackgroundColor="White" />
+
+        <!-- Diğer içerikler -->
+        <ScrollView>
+            <!-- Yatak kutularını içeren StackLayout -->
+            <StackLayout>
+                <BoxView Color="LightGray" HeightRequest="100" Margin="10" CornerRadius="16"/>
+                <BoxView Color="LightGray" HeightRequest="100" Margin="10" CornerRadius="16"/>
+                <BoxView Color="LightGray" HeightRequest="100" Margin="10" CornerRadius="16"/>
+                <!-- Diğer yatak kutularını ekleyebilirsiniz -->
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>
