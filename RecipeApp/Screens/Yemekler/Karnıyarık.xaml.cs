@@ -1,4 +1,4 @@
-﻿namespace RecipeApp.Screens.Yemekler;
+﻿namespace RecipeApp.Screens;
 
 public partial class Karnıyarık : ContentPage
 {

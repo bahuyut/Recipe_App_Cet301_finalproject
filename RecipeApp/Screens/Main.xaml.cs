@@ -6,6 +6,13 @@ public partial class Main : ContentPage
 	{
 		InitializeComponent();
 
+        
+    }
+    
+    void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
+    {
+        Navigation.PushAsync(new Karnıyarık());
 
-	}
+    }
+
 }
