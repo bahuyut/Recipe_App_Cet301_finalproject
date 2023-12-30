@@ -11,7 +11,7 @@
         </StackLayout>
 
         <!-- Alt kısım için StackLayout -->
-        <StackLayout BackgroundColor="White" VerticalOptions="EndAndExpand" HeightRequest="300" >
+        <StackLayout BackgroundColor="White" VerticalOptions="EndAndExpand" HeightRequest="300">
             
             <Label Text="En iyi yemek tariflerini bizimle keşfedin!" Margin="30,30,30,30" FontSize="28" FontFamily="Avenir-Black" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
 

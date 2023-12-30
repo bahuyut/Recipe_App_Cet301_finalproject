@@ -4,6 +4,11 @@
 <dict>
   <key>UIAppFonts</key>
   <array>
+	<string>.DS_Store</string>
+	<string>Avenir-Black.ttf</string>
+	<string>Avenir-Heavy.ttf</string>
+	<string>Avenir-Regular.ttf</string>
+	<string>MauiInfo.plist</string>
 	<string>OpenSans-Regular.ttf</string>
 	<string>OpenSans-Semibold.ttf</string>
   </array>

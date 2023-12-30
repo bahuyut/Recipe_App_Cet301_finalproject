@@ -58,12 +58,20 @@
 	<ItemGroup>
 	  <None Remove="Screens\" />
 	  <None Remove="Repository\" />
+	  <None Remove="Resources\kurufasülye.jpg" />
+	  <None Remove="Resources\mantı.jpg" />
+	  <None Remove="Screens\Yemekler\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Screens\" />
 	  <Folder Include="Repository\" />
+	  <Folder Include="Screens\Yemekler\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Include="RecipeApp.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\kurufasülye.jpg" />
+	  <BundleResource Include="Resources\mantı.jpg" />
 	</ItemGroup>
 </Project>

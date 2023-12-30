@@ -269,3 +269,8 @@
 /Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Assets.xcassets/icon.appiconset/icon76x76@2x.png
 /Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Assets.xcassets/icon.appiconset/icon83.5x83.5@2x.png
 /Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Assets.xcassets/icon.appiconset/iconItunesArtwork.png
+/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/r/Resources/onboarding.jpg
+/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/f/.DS_Store
+/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/f/Avenir-Black.ttf
+/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/f/Avenir-Heavy.ttf
+/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/resizetizer/f/Avenir-Regular.ttf
