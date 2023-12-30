@@ -8,6 +8,7 @@
              Title="Main">
     <StackLayout>
         
+                    <Label Text="Yemekler" Margin="10,10,10,10" FontSize="28" FontFamily="Avenir-Heavy" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
 
         <ScrollView>
             <StackLayout>
