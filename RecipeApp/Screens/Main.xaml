@@ -7,53 +7,47 @@
              x:Class="RecipeApp.Screens.Main"
              Title="Main">
     <StackLayout>
-        <!-- SearchBar -->
-        <SearchBar x:Name="searchBar" Placeholder="Ara..." BackgroundColor="White"/>
+        
 
-        <!-- Diğer içerikler -->
         <ScrollView>
-            <!-- Yemek kutularını içeren StackLayout -->
             <StackLayout>
                 <Frame ClassId="Karnıyarık" CornerRadius="16" Margin="10">
                     <Grid>
-                        <!-- Sol tarafta yemek görseli -->
                         <Image Source="karniyarik.jpg" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" />
                         
-                        <!-- Sağ tarafta yemek ismi -->
-                        <Label Text="karnıyarık" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="150,0,0,0" />
+                        <Label Text="Karnıyarık" VerticalOptions="Center" FontFamily="Avenir" FontSize="22" HorizontalOptions="StartAndExpand" Margin="150,0,0,0" />
                     </Grid>
                     <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        <TapGestureRecognizer Tapped="KarnıyarıkTapped"/>
                     </Frame.GestureRecognizers>
                 </Frame>
 
                 <Frame ClassId="kurufasulye" CornerRadius="16" Margin="10">
                     <Grid>
-                        <!-- Sol tarafta yemek görseli -->
                         <Image Source="kurufasülye.jpg" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" />
                         
-                        <!-- Sağ tarafta yemek ismi -->
-                        <Label Text="Kuru Fasülye" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="150,0,0,0"/>
+                        <Label Text="Kuru Fasülye" VerticalOptions="Center" FontFamily="Avenir" FontSize="22" HorizontalOptions="StartAndExpand" Margin="150,0,0,0"/>
                     </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="KurufasulyeTapped"/>
+                    </Frame.GestureRecognizers>
                 </Frame>
                 <Frame ClassId="mantı" CornerRadius="16" Margin="10">
                     <Grid>
-                        <!-- Sol tarafta yemek görseli -->
                         <Image Source="mantı.jpg" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" />
                         
-                        <!-- Sağ tarafta yemek ismi -->
-                        <Label Text="Mantı" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Margin="150,0,0,0"/>
+                        <Label Text="Mantı" VerticalOptions="Center" FontFamily="Avenir" FontSize="22" HorizontalOptions="StartAndExpand" Margin="150,0,0,0"/>
                     </Grid>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MantıTapped"/>
+                    </Frame.GestureRecognizers>
                 </Frame>
-                <Button Text="Kaydet" x:Name="SaveButton">
-
-
-                </Button>
-                
-              
-                
-                <!-- Diğer yemek kutularını ekleyebilirsiniz -->
             </StackLayout>
         </ScrollView>
+         <Button Text="Market Listesi" x:Name="marketlist" Clicked="MarketlistClicked"
+                        VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"
+                    Margin="16,16,16,16" FontFamily="Avenir-Heavy" FontSize="22">
+                </Button>
+
     </StackLayout>
 </ContentPage>

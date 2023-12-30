@@ -44,20 +44,38 @@ build_metadata.AdditionalFiles.ManifestResourceName = RecipeApp.Resources.Styles
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
 
+[/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/Screens/Karnıyarık.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RecipeApp.Screens.Karnıyarık.xaml
+build_metadata.AdditionalFiles.TargetPath = Screens/Karnıyarık.xaml
+build_metadata.AdditionalFiles.RelativePath = Screens/Karnıyarık.xaml
+
+[/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/Screens/Kurufasulye.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RecipeApp.Screens.Kurufasulye.xaml
+build_metadata.AdditionalFiles.TargetPath = Screens/Kurufasulye.xaml
+build_metadata.AdditionalFiles.RelativePath = Screens/Kurufasulye.xaml
+
 [/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/Screens/Main.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RecipeApp.Screens.Main.xaml
 build_metadata.AdditionalFiles.TargetPath = Screens/Main.xaml
 build_metadata.AdditionalFiles.RelativePath = Screens/Main.xaml
 
+[/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/Screens/Mantı.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RecipeApp.Screens.Mantı.xaml
+build_metadata.AdditionalFiles.TargetPath = Screens/Mantı.xaml
+build_metadata.AdditionalFiles.RelativePath = Screens/Mantı.xaml
+
+[/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/Screens/Marketlist.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RecipeApp.Screens.Marketlist.xaml
+build_metadata.AdditionalFiles.TargetPath = Screens/Marketlist.xaml
+build_metadata.AdditionalFiles.RelativePath = Screens/Marketlist.xaml
+
 [/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/Screens/Onboarding.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RecipeApp.Screens.Onboarding.xaml
 build_metadata.AdditionalFiles.TargetPath = Screens/Onboarding.xaml
 build_metadata.AdditionalFiles.RelativePath = Screens/Onboarding.xaml
-
-[/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/Screens/Yemekler/Karnıyarık.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = RecipeApp.Screens.Yemekler.Karnıyarık.xaml
-build_metadata.AdditionalFiles.TargetPath = Screens/Yemekler/Karnıyarık.xaml
-build_metadata.AdditionalFiles.RelativePath = Screens/Yemekler/Karnıyarık.xaml
