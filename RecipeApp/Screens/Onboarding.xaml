@@ -7,17 +7,14 @@
         <Image Source="onboarding.jpg" Aspect="AspectFill" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
 
         <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <!-- Diğer içerikler -->
         </StackLayout>
 
-        <!-- Alt kısım için StackLayout -->
         <StackLayout BackgroundColor="White" VerticalOptions="EndAndExpand" HeightRequest="300">
             
             <Label Text="En iyi yemek tariflerini bizimle keşfedin!" Margin="30,30,30,30" FontSize="28" FontFamily="Avenir-Black" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
 
             <Label Text="Kullanıcılar tarafından hazırlanan 5000'den fazla sağlıklı tarif burada!" Margin="30,0,30,30" FontSize="18" FontFamily="Avenir-Regular" TextColor="#97A2B0" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
 
-            <!-- İlerle Butonu -->
             <Button Text="İlerle" BackgroundColor="#70B9BE" Clicked="OnButtonClicked"
                     VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"
                     Margin="16,16,16,16" FontFamily="Avenir-Heavy" FontSize="22"/>
