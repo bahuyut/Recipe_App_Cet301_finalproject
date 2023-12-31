@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KJ/f+mgvR5vFDRSFpm+uzFwvc/GFmnDlKWlaW1c6gv6UK/7IG+sIcqmfMD6HMX9ImYGVJeNGz/YovEJq3oqgyA==",
+  "dgSpecHash": "rbRz7mhiDKjtCphCvOoy9JymR05GoqPIGJ8KeJsSQKljKMRv32zBw/nM8cjwIEDiElOqUkEjqRIvpph2oHwj9g==",
   "success": true,
-  "projectFilePath": "/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/RecipeApp.csproj",
+  "projectFilePath": "/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp.csproj",
   "expectedPackageFiles": [
     "/Users/bayramalihuyut/.nuget/packages/googlegson/2.9.1.1/googlegson.2.9.1.1.nupkg.sha512",
     "/Users/bayramalihuyut/.nuget/packages/microsoft.extensions.configuration/7.0.0/microsoft.extensions.configuration.7.0.0.nupkg.sha512",

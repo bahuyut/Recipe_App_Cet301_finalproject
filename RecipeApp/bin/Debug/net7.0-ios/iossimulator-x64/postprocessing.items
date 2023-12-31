@@ -7,9 +7,9 @@
       <dSYMSourcePathExists>false</dSYMSourcePathExists>
       <NoSymbolStrip>true</NoSymbolStrip>
       <dSYMInfoPlistRelativePath>RecipeApp.app.dSYM\Contents\Info.plist</dSYMInfoPlistRelativePath>
-      <SymbolFile>/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/obj/Debug/net7.0-ios/iossimulator-x64/mtouch-symbols.list</SymbolFile>
+      <SymbolFile>/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/obj/Debug/net7.0-ios/iossimulator-x64/mtouch-symbols.list</SymbolFile>
       <DSymName>RecipeApp.app.dSYM</DSymName>
-      <SourceProjectPath>/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp</SourceProjectPath>
+      <SourceProjectPath>/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp</SourceProjectPath>
     </_PostProcessingItem>
   </ItemGroup>
 </Project>

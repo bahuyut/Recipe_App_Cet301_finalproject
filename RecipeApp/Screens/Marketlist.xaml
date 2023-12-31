@@ -3,10 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RecipeApp.Screens.Marketlist"
              Title="Marketlist">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <StackLayout>
+                        <Label x:Name="emptyListLabel" Text="Liste Boş" FontSize="22" FontFamily="Avenir-Heavy" IsVisible="False" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+        <ListView x:Name="marketListView" ItemsSource="{Binding MarketItems}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" >
+                            <Label Text="{Binding Name}" VerticalOptions="CenterAndExpand" FontSize="22" FontFamily="Avenir" Margin="16,16,16,16" WidthRequest="200" />
+                            <Button Text="Sil" FontSize="22" FontFamily="Avenir-Heavy" Clicked="OnDeleteClicked" CommandParameter="{Binding .}" BackgroundColor="Red" HorizontalOptions="EndAndExpand" WidthRequest="100"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+            <Entry x:Name="itemEntry" Placeholder="Ürün Adı" WidthRequest="300"/>
+            <Button Text="Ekle" Clicked="OnAddClicked" />
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

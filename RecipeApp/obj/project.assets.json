@@ -18447,11 +18447,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/RecipeApp.csproj",
+      "projectUniqueName": "/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp.csproj",
       "projectName": "RecipeApp",
-      "projectPath": "/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/RecipeApp.csproj",
+      "projectPath": "/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp.csproj",
       "packagesPath": "/Users/bayramalihuyut/.nuget/packages/",
-      "outputPath": "/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/RecipeApp/obj/",
+      "outputPath": "/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/obj/",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
