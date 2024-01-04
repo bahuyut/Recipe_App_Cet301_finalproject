@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{903A7CE5-5ABD-4A65-B101-38E9EAB451D3}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="RecipeApp/Screens/Marketlist.xaml.cs">
+    <Files>
+      <File FileName="RecipeApp/Screens/Marketlist.xaml" Line="1" Column="1" />
+      <File FileName="RecipeApp/Screens/Marketlist.xaml.cs" Line="50" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="RecipeApp">
+            <Node name="RecipeApp">
+              <Node name="Screens">
+                <Node name="Marketlist.xaml" expanded="True">
+                  <Node name="Marketlist.xaml.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4FEA511F-CC2B-4597-82D4-675B6186CC52" />
+  <MonoDevelop.Ide.ItemProperties.RecipeApp PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.4FEA511F-CC2B-4597-82D4-675B6186CC52" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

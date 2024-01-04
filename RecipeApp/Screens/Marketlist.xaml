@@ -6,20 +6,36 @@
     <StackLayout>
                         <Label x:Name="emptyListLabel" Text="Liste Boş" FontSize="22" FontFamily="Avenir-Heavy" IsVisible="False" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
 
-        <ListView x:Name="marketListView" ItemsSource="{Binding MarketItems}">
+        
+
+        <ListView x:Name="marketListView" HeightRequest="300" RowHeight="50" 
+                  SeparatorColor="Silver" SeparatorVisibility="Default" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal" >
-                            <Label Text="{Binding Name}" VerticalOptions="CenterAndExpand" FontSize="22" FontFamily="Avenir" Margin="16,16,16,16" WidthRequest="200" />
-                            <Button Text="Sil" FontSize="22" FontFamily="Avenir-Heavy" Clicked="OnDeleteClicked" CommandParameter="{Binding .}" BackgroundColor="Red" HorizontalOptions="EndAndExpand" WidthRequest="100"/>
-                        </StackLayout>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0"
+                                   TextColor="Black"
+                                   Text="{Binding Name}"
+                                   FontSize="16"/>
+                            
+                            <Button Grid.Column="1"
+                                    Text="Sil"
+                                    BackgroundColor="Red"
+                                    TextColor="White"
+                                    Clicked="OnDeleteClicked" 
+                                    CommandParameter="{Binding .}" />
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
+                
             </ListView.ItemTemplate>
         </ListView>
-
-
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
             <Entry x:Name="itemEntry" Placeholder="Ürün Adı" WidthRequest="300"/>

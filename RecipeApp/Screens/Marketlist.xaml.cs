@@ -1,52 +1,57 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using Microsoft.Maui.Controls;
+﻿
 
-namespace RecipeApp.Screens
+
+using RecipeApp.Screens;
+
+namespace RecipeApp.Screens;
+
+public partial class Marketlist : ContentPage
 {
-    public partial class Marketlist : ContentPage
+    MarketlistRepository marketlistRepository;
+    public Marketlist()
     {
-        public ObservableCollection<MarketItem> MarketItems { get; set; }
+        InitializeComponent();
+        marketlistRepository = new MarketlistRepository();
+    }
 
-        
-
-        public Marketlist()
-        {
-            InitializeComponent();
-            MarketItems = new ObservableCollection<MarketItem>();
-            marketListView.ItemsSource = MarketItems;
-            UpdateEmptyListLabelVisibility();
-        }
-
-        private async void OnDeleteClicked(object sender, EventArgs e)
-        {
-            var item = (MarketItem)((Button)sender).CommandParameter;
-
-            bool answer = await DisplayAlert("Sil", $"Emin misiniz? {item.Name} silinecek.", "Evet", "Hayır");
-
-            if (answer)
-            {
-                MarketItems.Remove(item);
-            }
-
-            UpdateEmptyListLabelVisibility();
-        }
-
-
-
-        private void OnAddClicked(object sender, EventArgs e)
-        {
-            var newItem = new MarketItem { Name = itemEntry.Text };
-            MarketItems.Add(newItem);
-            itemEntry.Text = "";
-
-            UpdateEmptyListLabelVisibility();
-        }
-
-        private void UpdateEmptyListLabelVisibility()
-        {
-            emptyListLabel.IsVisible = MarketItems.Count == 0;
-        }
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        var item = await marketlistRepository.GetAllItems();
+        marketListView.ItemsSource = item;
 
     }
+
+
+    private async void OnAddClicked(object sender, EventArgs e)
+    {
+        
+        
+
+        MarketItem item = new MarketItem
+        {
+            Name = itemEntry.Text,
+            
+        };
+        await marketlistRepository.AddItem(item);
+        var updatedItems = await marketlistRepository.GetAllItems();
+            marketListView.ItemsSource = updatedItems;
+    }
+
+    private async void OnDeleteClicked(object sender, EventArgs e)
+    {
+        Button btn = (Button)sender;
+        MarketItem itemToDelete = (MarketItem)btn.CommandParameter;
+
+        bool answer = await DisplayAlert("Uyarı", "Silmek istediğinize emin misiniz?", "Evet", "Hayır");
+
+        if (answer)
+        {
+            await marketlistRepository.DeleteItem(itemToDelete);
+            // Liste güncellendikten sonra ListView'ı tekrar güncelle
+            var updatedItems = await marketlistRepository.GetAllItems();
+            marketListView.ItemsSource = updatedItems;
+        }
+    }
+
 }

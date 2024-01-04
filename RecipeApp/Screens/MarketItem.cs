@@ -2,5 +2,6 @@
 
 public class MarketItem
 {
+
     public string Name { get; set; }
 }

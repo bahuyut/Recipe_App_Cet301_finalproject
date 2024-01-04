@@ -9,6 +9,10 @@
 /Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/bin/Debug/net7.0-ios/iossimulator-x64/publish/../RecipeApp.app/Microsoft.Extensions.Options.dll
 /Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/bin/Debug/net7.0-ios/iossimulator-x64/publish/../RecipeApp.app/Microsoft.Extensions.Primitives.dll
 /Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/bin/Debug/net7.0-ios/iossimulator-x64/publish/../RecipeApp.app/Microsoft.Maui.Graphics.dll
+/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/bin/Debug/net7.0-ios/iossimulator-x64/publish/../RecipeApp.app/SQLite-net.dll
+/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/bin/Debug/net7.0-ios/iossimulator-x64/publish/../RecipeApp.app/SQLitePCLRaw.batteries_v2.dll
+/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/bin/Debug/net7.0-ios/iossimulator-x64/publish/../RecipeApp.app/SQLitePCLRaw.core.dll
+/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/bin/Debug/net7.0-ios/iossimulator-x64/publish/../RecipeApp.app/SQLitePCLRaw.provider.sqlite3.dll
 /Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/bin/Debug/net7.0-ios/iossimulator-x64/publish/../RecipeApp.app/RecipeApp.dll
 /Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/bin/Debug/net7.0-ios/iossimulator-x64/publish/../RecipeApp.app/Microsoft.CSharp.dll
 /Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/bin/Debug/net7.0-ios/iossimulator-x64/publish/../RecipeApp.app/Microsoft.VisualBasic.Core.dll
