@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RecipeApp.Screens.AddRecipePage"
+             Title="Add Recipe">
+
+    <StackLayout Margin="16,16,16,16">
+        <Label Text="Yemek Adı:" />
+        <Entry x:Name="recipeNameEntry" Placeholder="Yemek Adını Girin" />
+
+        <Label Text="Malzemeler:" />
+        <Entry x:Name="ingredientsEntry" Placeholder="Malzemeleri Girin" />
+
+        <Label Text="Tarif:" />
+        <Entry x:Name="instructionsEntry" Placeholder="Tarifi Girin" HeightRequest="500" />
+
+        <Button Text="Kaydet" Clicked="SaveButton_Clicked" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" />
+    </StackLayout>
+</ContentPage>

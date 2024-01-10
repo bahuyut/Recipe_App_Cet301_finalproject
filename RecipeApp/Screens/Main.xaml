@@ -10,41 +10,23 @@
         
                     <Label Text="Yemekler" Margin="10,10,10,10" FontSize="28" FontFamily="Avenir-Heavy" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
 
-        <ScrollView>
-            <StackLayout>
-                <Frame ClassId="Karnıyarık" CornerRadius="16" Margin="10">
-                    <Grid>
-                        <Image Source="karniyarik.jpg" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" />
-                        
-                        <Label Text="Karnıyarık" VerticalOptions="Center" FontFamily="Avenir" FontSize="22" HorizontalOptions="StartAndExpand" Margin="150,0,0,0" />
-                    </Grid>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="KarnıyarıkTapped"/>
-                    </Frame.GestureRecognizers>
-                </Frame>
-
-                <Frame ClassId="kurufasulye" CornerRadius="16" Margin="10">
-                    <Grid>
-                        <Image Source="kurufasülye.jpg" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" />
-                        
-                        <Label Text="Kuru Fasülye" VerticalOptions="Center" FontFamily="Avenir" FontSize="22" HorizontalOptions="StartAndExpand" Margin="150,0,0,0"/>
-                    </Grid>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="KurufasulyeTapped"/>
-                    </Frame.GestureRecognizers>
-                </Frame>
-                <Frame ClassId="mantı" CornerRadius="16" Margin="10">
-                    <Grid>
-                        <Image Source="mantı.jpg" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" />
-                        
-                        <Label Text="Mantı" VerticalOptions="Center" FontFamily="Avenir" FontSize="22" HorizontalOptions="StartAndExpand" Margin="150,0,0,0"/>
-                    </Grid>
-                    <Frame.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="MantıTapped"/>
-                    </Frame.GestureRecognizers>
-                </Frame>
-            </StackLayout>
-        </ScrollView>
+        <StackLayout>
+        <ListView x:Name="recipeListView" HeightRequest="600">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="10">
+                            <Label Text="{Binding Name}" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+        <Button Text="Yemek Tarifi Ekle" x:Name="addrecipe" Clicked="AddRecipeClicked"
+                        VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"
+                    Margin="16,16,16,16" FontFamily="Avenir-Heavy" FontSize="22">
+                </Button>
          <Button Text="Market Listesi" x:Name="marketlist" Clicked="MarketlistClicked"
                         VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"
                     Margin="16,16,16,16" FontFamily="Avenir-Heavy" FontSize="22">

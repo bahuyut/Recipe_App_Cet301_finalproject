@@ -1,56 +1,52 @@
-﻿using SQLite;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using SQLite;
+namespace RecipeApp.Screens;
 
-namespace CetContact.Model
+public class RecipeRepository
 {
-    public class RecipeRepository
+    private readonly string databasePath;
+    private SQLiteConnection database;
+
+    public RecipeRepository(string databasePath)
     {
-        private SQLiteAsyncConnection database;
-        private string databaseName = "recipes.db3";
+        this.databasePath = databasePath;
+        InitializeDatabase();
+    }
 
-        public RecipeRepository()
+    private void InitializeDatabase()
+    {
+        if (database == null)
         {
-            string dbPath = Path.Combine(FileSystem.AppDataDirectory, databaseName);
-            database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<Recipe>(CreateFlags.AllImplicit | CreateFlags.AutoIncPK).GetAwaiter().GetResult();
-        }
-
-        public async Task<List<Recipe>> GetAllRecipes()
-        {
-            return await database.Table<Recipe>().ToListAsync();
-        }
-
-        public async Task AddRecipe(Recipe recipe)
-        {
-            await database.InsertAsync(recipe);
-        }
-
-        public async Task DeleteRecipe(Recipe recipe)
-        {
-            await database.DeleteAsync(recipe);
-        }
-
-        public async Task<Recipe> GetRecipeById(int Id)
-        {
-            var recipe = await database.Table<Recipe>().Where(c => c.Id == Id).FirstOrDefaultAsync();
-            return recipe;
-        }
-
-        public async Task Update(Recipe recipe)
-        {
-            await database.UpdateAsync(recipe);
-        }
-
-        public async Task<List<Recipe>> SearchRecipes(string keyword)
-        {
-            keyword = keyword.ToLower();
-            return await database.Table<Recipe>()
-                                .Where(c => c.Name.ToLower().Contains(keyword))
-                                .ToListAsync();
+            database = new SQLiteConnection(databasePath);
+            database.CreateTable<Recipe>();
         }
     }
+
+    public List<Recipe> GetAllRecipes()
+    {
+        return database.Table<Recipe>().ToList();
+    }
+
+    public Recipe GetRecipeById(int id)
+    {
+        return database.Table<Recipe>().FirstOrDefault(r => r.Id == id);
+    }
+
+    public void AddRecipe(Recipe recipe)
+    {
+        database.Insert(recipe);
+    }
+
+    public void UpdateRecipe(Recipe recipe)
+    {
+        database.Update(recipe);
+    }
+
+    public void DeleteRecipe(int id)
+    {
+        database.Delete<Recipe>(id);
+    }
+    
 }

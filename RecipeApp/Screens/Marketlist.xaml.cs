@@ -48,7 +48,6 @@ public partial class Marketlist : ContentPage
         if (answer)
         {
             await marketlistRepository.DeleteItem(itemToDelete);
-            // Liste güncellendikten sonra ListView'ı tekrar güncelle
             var updatedItems = await marketlistRepository.GetAllItems();
             marketListView.ItemsSource = updatedItems;
         }

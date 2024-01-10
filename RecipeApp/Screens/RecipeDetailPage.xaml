@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://schemas.microsoft.com/dotnet/2021/maui/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RecipeApp.Screens.RecipeDetailPage"
+             Title="RecipeDetailPage">
+    <StackLayout Margin="16,16,16,16">
+        <Label Text="{Binding Name}" FontSize="22" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+        <Label Text="Malzemeler:" FontSize="18" FontAttributes="Bold" Margin="0,10,0,5" />
+        <Label Text="{Binding Ingredients}" />
+        <Label Text="Yemek Tarifi:" FontSize="18" FontAttributes="Bold" Margin="0,10,0,5" />
+        <Label Text="{Binding Instructions}" />
+
+    </StackLayout>
+</ContentPage>
