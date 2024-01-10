@@ -4,40 +4,25 @@
              x:Class="RecipeApp.Screens.Marketlist"
              Title="Marketlist">
     <StackLayout>
-                        <Label x:Name="emptyListLabel" Text="Liste Boş" FontSize="22" FontFamily="Avenir-Heavy" IsVisible="False" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
 
         
 
         <ListView x:Name="marketListView" HeightRequest="300" RowHeight="50" 
-                  SeparatorColor="Silver" SeparatorVisibility="Default" >
+                  SeparatorColor="Silver" SeparatorVisibility="Default" VerticalOptions="Start">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-
-                            <Label Grid.Column="0"
-                                   TextColor="Black"
-                                   Text="{Binding Name}"
-                                   FontSize="16"/>
-                            
-                            <Button Grid.Column="1"
-                                    Text="Sil"
-                                    BackgroundColor="Red"
-                                    TextColor="White"
-                                    Clicked="OnDeleteClicked" 
-                                    CommandParameter="{Binding .}" />
-                        </Grid>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Name}" Margin="16,16,16,16" VerticalOptions="CenterAndExpand" />
+                            <Button Text="Sil" BackgroundColor="Red" TextColor="White" Command="{Binding DeleteCommand}" Clicked="OnDeleteClicked" CommandParameter="{Binding .}" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
                 
             </ListView.ItemTemplate>
         </ListView>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
             <Entry x:Name="itemEntry" Placeholder="Ürün Adı" WidthRequest="300"/>
             <Button Text="Ekle" Clicked="OnAddClicked" />
         </StackLayout>
