@@ -24,6 +24,7 @@ public class RecipeRepository
         }
     }
 
+
     public List<Recipe> GetAllRecipes()
     {
         return database.Table<Recipe>().ToList();

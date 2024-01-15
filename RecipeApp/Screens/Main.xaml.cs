@@ -41,6 +41,22 @@ namespace RecipeApp.Screens
             Navigation.PushAsync(new Marketlist());
 
         }
+
+        private async void DeleteRecipeClicked(object sender, EventArgs e)
+        {
+            if (sender is Button button && button.CommandParameter is int recipeId)
+            {
+                bool isConfirmed = await DisplayAlert("Uyarı", "Bu yemeği silmek istediğinden emin misin?", "Evet", "Hayır");
+
+                if (isConfirmed)
+                {
+                    recipeRepository.DeleteRecipe(recipeId);
+                    var recipes = recipeRepository.GetAllRecipes();
+                    recipeListView.ItemsSource = recipes;
+                }
+            }
+        }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -48,6 +64,7 @@ namespace RecipeApp.Screens
             var recipes = recipeRepository.GetAllRecipes();
             recipeListView.ItemsSource = recipes;
         }
+
 
     }
 }
