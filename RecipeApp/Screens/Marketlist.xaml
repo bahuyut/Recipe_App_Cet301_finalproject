@@ -6,6 +6,7 @@
     <StackLayout>
 
         
+        <Label x:Name="emptyListLabel" Text="Listen boş!" IsVisible="False" Margin="0,16,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" />
 
         <ListView x:Name="marketListView" HeightRequest="300" RowHeight="50" 
                   SeparatorColor="Silver" SeparatorVisibility="Default" VerticalOptions="Start">
