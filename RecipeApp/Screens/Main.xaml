@@ -8,7 +8,8 @@
              Title="Main">
     <StackLayout>
         
-                    <Label Text="Yemekler" Margin="10,10,10,10" FontSize="28" FontFamily="Avenir-Heavy" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+        <Label Text="Yemekler" Margin="10,10,10,10" FontSize="28" FontFamily="Avenir-Heavy" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+        <SearchBar x:Name="searchBar" BackgroundColor="White" Placeholder="Yemek Ara" TextChanged="SearchBar_TextChanged"/>
 
         <StackLayout>
         <ListView x:Name="recipeListView" HeightRequest="600">
@@ -26,7 +27,7 @@
     </StackLayout>
         <Button Text="Yemek Tarifi Ekle" x:Name="addrecipe" Clicked="AddRecipeClicked"
                         VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"
-                    Margin="16,16,16,16" FontFamily="Avenir-Heavy" FontSize="22">
+                    Margin="16,16,16,24" FontFamily="Avenir-Heavy" FontSize="22">
                 </Button>
          <Button Text="Market Listesi" x:Name="marketlist" Clicked="MarketlistClicked"
                         VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"

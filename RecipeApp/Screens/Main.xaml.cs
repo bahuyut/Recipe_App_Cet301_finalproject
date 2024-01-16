@@ -22,6 +22,19 @@ namespace RecipeApp.Screens
             recipeListView.ItemTapped += RecipeListView_ItemTapped;
         }
 
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            string keyword = e.NewTextValue.ToLower();
+
+            var recipes = recipeRepository.GetAllRecipes();
+
+            // Filter the recipes based on the entered keyword
+            var filteredRecipes = recipes.Where(r => r.Name.ToLower().Contains(keyword)).ToList();
+
+            recipeListView.ItemsSource = filteredRecipes;
+        }
+
+
         private void RecipeListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (e.Item is Recipe selectedRecipe)
