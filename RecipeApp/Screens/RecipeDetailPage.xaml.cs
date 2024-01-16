@@ -14,10 +14,8 @@ namespace RecipeApp.Screens
         {
             InitializeComponent();
 
-            // Seçilen yemeğin bilgilerini görüntüle
             if (selectedRecipe != null)
             {
-                // recipeImage.Source satırını çıkarttık
                 this.BindingContext = selectedRecipe;
             }
         }private async void AddToMarketList_Clicked(object sender, EventArgs e)
@@ -26,14 +24,13 @@ namespace RecipeApp.Screens
     {
         MarketItem marketItem = new MarketItem
         {
-            Name = selectedRecipe.Ingredients // Burada Ingredients property'sini ekleyerek malzemeleri ekleyebilirsiniz, ancak gerektiğinde uygun bir şekilde ayarlamalısınız
+            Name = selectedRecipe.Ingredients 
         };
 
         await new MarketlistRepository().AddItem(marketItem);
         await DisplayAlert("Başarı", "Malzeme Market Listesine Eklendi", "Tamam");
 
-        // Ekleme işlemi bittikten sonra Marketlist sayfasına geri dönme işlemi ekleyebilirsiniz.
-        await Navigation.PopAsync(); // Örnek bir geri dönme işlemi
+        await Navigation.PopAsync(); 
     }
 }
 
@@ -41,34 +38,48 @@ namespace RecipeApp.Screens
         {
             if (BindingContext is Recipe selectedRecipe)
             {
-                MarketItem marketItem = new MarketItem
+                string[] lines = selectedRecipe.Ingredients.Split('\n'); 
+                List<string> ingredients = new List<string>();
+
+                foreach (var line in lines)
                 {
-                    Name = selectedRecipe.Ingredients // Burada Ingredients property'sini ekleyerek malzemeleri ekleyebilirsiniz, ancak gerektiğinde uygun bir şekilde ayarlamalısınız
-                };
+                    
+                    string[] commaSeparated = line.Split(',');
+                    ingredients.AddRange(commaSeparated.Select(ingredient => ingredient.Trim()));
+                }
 
-                await new MarketlistRepository().AddItem(marketItem);
-                await DisplayAlert("Başarı", "Malzeme Market Listesine Eklendi", "Tamam");
+                foreach (var ingredient in ingredients)
+                {
+                    if (!string.IsNullOrWhiteSpace(ingredient))
+                    {
+                        MarketItem marketItem = new MarketItem
+                        {
+                            Name = ingredient
+                        };
 
-                // Ekleme işlemi bittikten sonra Marketlist sayfasına geri dönme işlemi ekleyebilirsiniz.
-                await Navigation.PopAsync(); // Örnek bir geri dönme işlemi
+                        await new MarketlistRepository().AddItem(marketItem);
+                    }
+                }
+
+                await DisplayAlert("Başarı", "Malzemeler Market Listesine Eklendi", "Tamam");
+
+              
             }
         }
+
+
 
         private void StartCountdown(object sender, EventArgs e)
         {
             if (!isCountdownRunning && countdownPicker.Time != null)
             {
-                // Get the selected time from TimePicker
                 var selectedTime = countdownPicker.Time;
 
-                // Calculate the total seconds
                 countdownSeconds = selectedTime.Hours * 3600 + selectedTime.Minutes * 60 + selectedTime.Seconds;
 
-                // Set the countdown end time
                 countdownEndTime = DateTime.Now.AddSeconds(countdownSeconds);
                 isCountdownRunning = true;
 
-                // Start the countdown
                 Device.StartTimer(TimeSpan.FromSeconds(1), UpdateCountdownLabel);
             }
         }
@@ -87,27 +98,23 @@ namespace RecipeApp.Screens
 
         private bool UpdateCountdownLabel()
         {
-            // Check if the countdown is stopped
             if (!isCountdownRunning)
             {
-                return false; // Stop the timer
+                return false; 
             }
 
-            // Calculate remaining seconds
             var remainingSeconds = (int)Math.Max(0, (countdownEndTime - DateTime.Now).TotalSeconds);
 
-            // Update the countdown label
             countdownLabel.Text = $"Kalan Süre: {TimeSpan.FromSeconds(remainingSeconds).ToString(@"hh\:mm\:ss")}";
 
-            // Check if the countdown is completed
             if (remainingSeconds == 0)
             {
                 countdownLabel.Text = "Süre Doldu!";
-                isCountdownRunning = false; // Stop the countdown
-                return false; // Stop the timer
+                isCountdownRunning = false; 
+                return false; 
             }
 
-            return true; // Continue the timer
+            return true; 
         }
     }
 }

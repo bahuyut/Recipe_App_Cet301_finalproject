@@ -26,7 +26,6 @@ namespace RecipeApp.Screens
             var items = await marketlistRepository.GetAllItems();
             marketListView.ItemsSource = items;
 
-            // Show/hide the empty list label based on the market list's emptiness
             emptyListLabel.IsVisible = items.Count == 0;
         }
 
@@ -38,7 +37,7 @@ namespace RecipeApp.Screens
             };
 
             await marketlistRepository.AddItem(item);
-            itemEntry.Text = string.Empty; // Clear the entry after adding an item
+            itemEntry.Text = string.Empty; 
             await UpdateMarketList();
         }
 
