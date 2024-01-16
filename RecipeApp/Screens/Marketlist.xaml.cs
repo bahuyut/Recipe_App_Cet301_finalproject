@@ -19,6 +19,7 @@ namespace RecipeApp.Screens
         {
             base.OnAppearing();
             await UpdateMarketList();
+            UpdateClearAllButtonVisibility();
         }
 
         private async Task UpdateMarketList()
@@ -27,6 +28,11 @@ namespace RecipeApp.Screens
             marketListView.ItemsSource = items;
 
             emptyListLabel.IsVisible = items.Count == 0;
+            UpdateClearAllButtonVisibility(); 
+        }
+        private void UpdateClearAllButtonVisibility()
+        {
+            clearAllButton.IsVisible = marketListView.ItemsSource?.Cast<MarketItem>().Any() == true;
         }
         private async void OnClearAllClicked(object sender, EventArgs e)
         {

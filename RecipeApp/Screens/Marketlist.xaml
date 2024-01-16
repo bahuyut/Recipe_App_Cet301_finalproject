@@ -22,7 +22,7 @@
                 
             </ListView.ItemTemplate>
         </ListView>
-        <Button Text="Tümünü Sil" FontFamily="Avenir-Heavy" WidthRequest="370" FontSize="22" BackgroundColor="Red" TextColor="White" Clicked="OnClearAllClicked" HorizontalOptions="CenterAndExpand" Margin="0,16,0,0"/>
+        <Button x:Name="clearAllButton" Text="Tümünü Sil" FontFamily="Avenir-Heavy" IsVisible="False"  WidthRequest="370" FontSize="22" BackgroundColor="Red" TextColor="White" Clicked="OnClearAllClicked" HorizontalOptions="CenterAndExpand" Margin="0,16,0,0"/>
         <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
 
             <Entry x:Name="itemEntry" Placeholder="Ürün Adı" WidthRequest="300"/>
