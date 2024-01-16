@@ -26,6 +26,6 @@
             <Editor x:Name="instructionsEditor" Placeholder="Tarifi Girin" AutoSize="TextChanges" HeightRequest="200" />
         </Frame>
 
-        <Button Text="Kaydet" Clicked="SaveButton_Clicked" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" />
+        <Button Text="Kaydet" FontFamily="Avenir-Heavy" FontSize="22"  Clicked="SaveButton_Clicked" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" />
     </StackLayout>
 </ContentPage>

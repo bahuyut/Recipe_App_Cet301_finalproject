@@ -6,7 +6,7 @@
     <StackLayout>
 
         
-        <Label x:Name="emptyListLabel" Text="Listen boş!" IsVisible="False" Margin="0,16,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" />
+        <Label x:Name="emptyListLabel" Text="Market listen boş!" IsVisible="False" FontFamily="Avenir-Heavy" FontSize="22"  Margin="0,16,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" />
 
         <ListView x:Name="marketListView" HeightRequest="300" RowHeight="50" 
                   SeparatorColor="Silver" SeparatorVisibility="Default" VerticalOptions="Start">
@@ -25,7 +25,7 @@
 
         <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand">
             <Entry x:Name="itemEntry" Placeholder="Ürün Adı" WidthRequest="300"/>
-            <Button Text="Ekle" Clicked="OnAddClicked" />
+            <Button Text="Ekle" FontFamily="Avenir-Heavy" FontSize="22"  Clicked="OnAddClicked" />
         </StackLayout>
     </StackLayout>
 </ContentPage>
