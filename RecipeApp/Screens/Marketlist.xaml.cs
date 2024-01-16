@@ -28,7 +28,16 @@ namespace RecipeApp.Screens
 
             emptyListLabel.IsVisible = items.Count == 0;
         }
+        private async void OnClearAllClicked(object sender, EventArgs e)
+        {
+            bool answer = await DisplayAlert("Uyarı", "Tümünü silmek istediğinize emin misiniz?", "Evet", "Hayır");
 
+            if (answer)
+            {
+                await marketlistRepository.ClearAllItems();
+                await UpdateMarketList();
+            }
+        }
         private async void OnAddClicked(object sender, EventArgs e)
         {
             MarketItem item = new MarketItem

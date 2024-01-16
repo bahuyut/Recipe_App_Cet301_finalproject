@@ -18,6 +18,10 @@ namespace RecipeApp.Screens
             database = new SQLiteAsyncConnection(dbPath);
             database.CreateTableAsync<MarketItem>(CreateFlags.AllImplicit).GetAwaiter().GetResult();
         }
+        public async Task ClearAllItems()
+        {
+            await database.DeleteAllAsync<MarketItem>();
+        }
 
         public async Task<List<MarketItem>> GetAllItems()
         {

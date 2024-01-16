@@ -11,19 +11,19 @@
         
 
 
-        <Label Text="Yemek Adı:" />
+        <Label Text="Yemek Adı:" FontFamily="Avenir" FontSize="22" />
         <Frame BorderColor="#70B9BE" CornerRadius="5" Padding="5">
             <Editor x:Name="recipeNameEntry" Placeholder="Yemek adını girin" AutoSize="TextChanges" HeightRequest="30" />
         </Frame>
 
-        <Label Text="Malzemeler:" />
+        <Label Text="Malzemeler:" FontFamily="Avenir" FontSize="22" />
         <Frame BorderColor="#70B9BE" CornerRadius="5" Padding="5">
-            <Editor x:Name="ingredientsEditor" Placeholder="Malzemeleri Girin" AutoSize="TextChanges" HeightRequest="200" />
+            <Editor x:Name="ingredientsEditor" Placeholder="Malzemeleri Girin" AutoSize="TextChanges" HeightRequest="250" />
         </Frame>
 
-        <Label Text="Tarif:" />
+        <Label Text="Tarif:" FontFamily="Avenir" FontSize="22"/>
         <Frame BorderColor="#70B9BE" CornerRadius="5" Padding="5">
-            <Editor x:Name="instructionsEditor" Placeholder="Tarifi Girin" AutoSize="TextChanges" HeightRequest="200" />
+            <Editor x:Name="instructionsEditor" Placeholder="Tarifi Girin" AutoSize="TextChanges" HeightRequest="250" />
         </Frame>
 
         <Button Text="Kaydet" FontFamily="Avenir-Heavy" FontSize="22"  Clicked="SaveButton_Clicked" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" />
