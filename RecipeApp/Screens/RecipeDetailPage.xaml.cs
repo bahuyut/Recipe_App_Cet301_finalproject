@@ -20,6 +20,38 @@ namespace RecipeApp.Screens
                 // recipeImage.Source satırını çıkarttık
                 this.BindingContext = selectedRecipe;
             }
+        }private async void AddToMarketList_Clicked(object sender, EventArgs e)
+{
+    if (BindingContext is Recipe selectedRecipe)
+    {
+        MarketItem marketItem = new MarketItem
+        {
+            Name = selectedRecipe.Ingredients // Burada Ingredients property'sini ekleyerek malzemeleri ekleyebilirsiniz, ancak gerektiğinde uygun bir şekilde ayarlamalısınız
+        };
+
+        await new MarketlistRepository().AddItem(marketItem);
+        await DisplayAlert("Başarı", "Malzeme Market Listesine Eklendi", "Tamam");
+
+        // Ekleme işlemi bittikten sonra Marketlist sayfasına geri dönme işlemi ekleyebilirsiniz.
+        await Navigation.PopAsync(); // Örnek bir geri dönme işlemi
+    }
+}
+
+        private async void AddToMarketList_Clickedd(object sender, EventArgs e)
+        {
+            if (BindingContext is Recipe selectedRecipe)
+            {
+                MarketItem marketItem = new MarketItem
+                {
+                    Name = selectedRecipe.Ingredients // Burada Ingredients property'sini ekleyerek malzemeleri ekleyebilirsiniz, ancak gerektiğinde uygun bir şekilde ayarlamalısınız
+                };
+
+                await new MarketlistRepository().AddItem(marketItem);
+                await DisplayAlert("Başarı", "Malzeme Market Listesine Eklendi", "Tamam");
+
+                // Ekleme işlemi bittikten sonra Marketlist sayfasına geri dönme işlemi ekleyebilirsiniz.
+                await Navigation.PopAsync(); // Örnek bir geri dönme işlemi
+            }
         }
 
         private void StartCountdown(object sender, EventArgs e)
