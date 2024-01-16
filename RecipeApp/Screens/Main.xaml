@@ -7,32 +7,35 @@
              x:Class="RecipeApp.Screens.Main"
              Title="Main">
     <StackLayout>
-        
-        <Label Text="Yemekler" Margin="10,10,10,10" FontSize="28" FontFamily="Avenir-Heavy" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+        <StackLayout VerticalOptions="FillAndExpand" HeightRequest="400">
+            <Image Source="mainscreen.png" Aspect="AspectFit" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
         <SearchBar x:Name="searchBar" BackgroundColor="White" Placeholder="Yemek Ara" TextChanged="SearchBar_TextChanged"/>
-
         <StackLayout>
-        <ListView x:Name="recipeListView" HeightRequest="600">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="10">
-                            <Label Text="{Binding Name}" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />
-                            <Button Text="Sil" Clicked="DeleteRecipeClicked" CommandParameter="{Binding Id}" HorizontalOptions="End" />
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
-        <Button Text="Yemek Tarifi Ekle" x:Name="addrecipe" Clicked="AddRecipeClicked"
-                        VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"
-                    Margin="16,16,16,24" FontFamily="Avenir-Heavy" FontSize="22">
-                </Button>
-         <Button Text="Market Listesi" x:Name="marketlist" Clicked="MarketlistClicked"
-                        VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"
-                    Margin="16,16,16,16" FontFamily="Avenir-Heavy" FontSize="22">
-                </Button>
+            <ListView x:Name="recipeListView" HeightRequest="470">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Label Text="{Binding Name}" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" />
+                                <Button Text="Sil" Clicked="DeleteRecipeClicked" CommandParameter="{Binding Id}" HorizontalOptions="End" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
 
+        <StackLayout Margin="16,0,16,24"> 
+            <Button Text="Yemek Tarifi Ekle" x:Name="addrecipe" Clicked="AddRecipeClicked"
+                    VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"
+                    FontFamily="Avenir-Heavy" FontSize="22">
+            </Button>
+
+            <Button Text="Market Listesi" x:Name="marketlist" Clicked="MarketlistClicked"
+                    VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"
+                    Margin="0,16,0,0" FontFamily="Avenir-Heavy" FontSize="22">
+            </Button>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
