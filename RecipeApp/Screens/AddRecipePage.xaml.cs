@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Maui.Controls;
+using System.IO; // Path sınıfını kullanmak için eklenen namespace
 
 namespace RecipeApp.Screens
 {
@@ -11,13 +12,14 @@ namespace RecipeApp.Screens
         {
             InitializeComponent();
 
+            // Path sınıfını kullanmak için gerekli using eklenmiş durumda
             string databasePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "recipes.db");
             recipeRepository = new RecipeRepository(databasePath);
         }
 
         private void SaveButton_Clicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(recipeNameEntry.Text) || string.IsNullOrWhiteSpace(ingredientsEntry.Text) || string.IsNullOrWhiteSpace(instructionsEntry.Text))
+            if (string.IsNullOrWhiteSpace(recipeNameEntry.Text) || string.IsNullOrWhiteSpace(ingredientsEditor.Text) || string.IsNullOrWhiteSpace(instructionsEditor.Text))
             {
                 DisplayAlert("Uyarı", "Lütfen tüm alanları doldurun.", "Tamam");
                 return;
@@ -26,8 +28,8 @@ namespace RecipeApp.Screens
             Recipe newRecipe = new Recipe
             {
                 Name = recipeNameEntry.Text,
-                Ingredients = ingredientsEntry.Text,
-                Instructions = instructionsEntry.Text
+                Ingredients = ingredientsEditor.Text,
+                Instructions = instructionsEditor.Text
             };
 
             recipeRepository.AddRecipe(newRecipe);
@@ -35,6 +37,5 @@ namespace RecipeApp.Screens
             DisplayAlert("Başarılı", "Yemek tarifi başarıyla eklendi.", "Tamam");
             Navigation.PopAsync();
         }
-
     }
 }

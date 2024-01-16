@@ -8,14 +8,23 @@
              Title="Add Recipe">
 
     <StackLayout Margin="16,16,16,16">
+        
+
+
         <Label Text="Yemek Adı:" />
-        <Entry x:Name="recipeNameEntry" Placeholder="Yemek Adını Girin" />
+        <Frame BorderColor="#70B9BE" CornerRadius="5" Padding="5">
+            <Editor x:Name="recipeNameEntry" Placeholder="Yemek adını girin" AutoSize="TextChanges" HeightRequest="30" />
+        </Frame>
 
         <Label Text="Malzemeler:" />
-        <Entry x:Name="ingredientsEntry" Placeholder="Malzemeleri Girin" />
+        <Frame BorderColor="#70B9BE" CornerRadius="5" Padding="5">
+            <Editor x:Name="ingredientsEditor" Placeholder="Malzemeleri Girin" AutoSize="TextChanges" HeightRequest="200" />
+        </Frame>
 
         <Label Text="Tarif:" />
-        <Entry x:Name="instructionsEntry" Placeholder="Tarifi Girin" HeightRequest="500" />
+        <Frame BorderColor="#70B9BE" CornerRadius="5" Padding="5">
+            <Editor x:Name="instructionsEditor" Placeholder="Tarifi Girin" AutoSize="TextChanges" HeightRequest="200" />
+        </Frame>
 
         <Button Text="Kaydet" Clicked="SaveButton_Clicked" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" />
     </StackLayout>
