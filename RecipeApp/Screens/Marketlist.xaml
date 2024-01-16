@@ -8,14 +8,14 @@
         
         <Label x:Name="emptyListLabel" Text="Market listen boş!" IsVisible="False" FontFamily="Avenir-Heavy" FontSize="22"  Margin="0,16,0,0" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" />
 
-        <ListView x:Name="marketListView" HeightRequest="300" RowHeight="50" 
+        <ListView x:Name="marketListView" HeightRequest="700" RowHeight="50" 
                   SeparatorColor="Silver" SeparatorVisibility="Default" VerticalOptions="Start">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
                             <Label Text="{Binding Name}" Margin="16,16,16,16" VerticalOptions="CenterAndExpand" />
-                            <Button Text="Sil" BackgroundColor="Red" TextColor="White" Command="{Binding DeleteCommand}" Clicked="OnDeleteClicked" CommandParameter="{Binding .}" HorizontalOptions="EndAndExpand"/>
+                            <Button Text="Sil" FontFamily="Avenir-Heavy" FontSize="22" BackgroundColor="Red" TextColor="White" Command="{Binding DeleteCommand}" Clicked="OnDeleteClicked" CommandParameter="{Binding .}" HorizontalOptions="EndAndExpand"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
