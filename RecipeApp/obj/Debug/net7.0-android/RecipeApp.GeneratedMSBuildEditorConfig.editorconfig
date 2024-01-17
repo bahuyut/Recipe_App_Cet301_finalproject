@@ -50,6 +50,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = RecipeApp.Screens.AddRecip
 build_metadata.AdditionalFiles.TargetPath = Screens/AddRecipePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Screens/AddRecipePage.xaml
 
+[/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/Screens/EditRecipePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RecipeApp.Screens.EditRecipePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Screens/EditRecipePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Screens/EditRecipePage.xaml
+
 [/Users/bayramalihuyut/Desktop/7.dönem/cet301/Final Project/Çalışma klasörü/RecipeApp/Screens/Main.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RecipeApp.Screens.Main.xaml

@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.Maui.Controls;
+using System;
 
 namespace RecipeApp.Screens
 {
@@ -34,6 +35,17 @@ namespace RecipeApp.Screens
             recipeListView.ItemsSource = filteredRecipes;
         }
 
+        private void EditRecipeClicked(object sender, EventArgs e)
+        {
+            if (sender is Button button && button.CommandParameter is int recipeId)
+            {
+                // Fetch the selected recipe from the repository
+                Recipe selectedRecipe = recipeRepository.GetRecipeById(recipeId);
+
+                // Navigate to the EditRecipePage with the selected recipe
+                Navigation.PushAsync(new EditRecipePage(selectedRecipe));
+            }
+        }
 
         private void RecipeListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {

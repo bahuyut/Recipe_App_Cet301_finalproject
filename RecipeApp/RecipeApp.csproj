@@ -62,6 +62,7 @@
 	  <None Remove="Repository\" />
 	  <None Remove="Resources\kurufasülye.jpg" />
 	  <None Remove="Resources\mantı.jpg" />
+	  <None Remove="Resources\Mainscreen.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Screens\" />
@@ -73,5 +74,6 @@
 	<ItemGroup>
 	  <BundleResource Include="Resources\kurufasülye.jpg" />
 	  <BundleResource Include="Resources\mantı.jpg" />
+	  <BundleResource Include="Resources\Mainscreen.png" />
 	</ItemGroup>
 </Project>

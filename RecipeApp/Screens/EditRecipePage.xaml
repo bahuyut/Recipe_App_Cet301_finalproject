@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecipeApp.Screens.EditRecipePage"
+             Title="Edit Recipe">
+    <StackLayout Margin="16">
+        
+
+        <Label Text="Yemek Adı:" FontFamily="Avenir" FontSize="22" />
+        <Frame BorderColor="#70B9BE" CornerRadius="5" Padding="5">
+            <Editor x:Name="recipeNameEntry" Placeholder="Yemek adını girin" AutoSize="TextChanges" HeightRequest="30" />
+        </Frame>
+
+        <Label Text="Malzemeler:" FontFamily="Avenir" FontSize="22" />
+        <Frame BorderColor="#70B9BE" CornerRadius="5" Padding="5">
+            <Editor x:Name="ingredientsEditor" Placeholder="Malzemeler" AutoSize="TextChanges" HeightRequest="250" />
+        </Frame>
+
+        <Label Text="Tarif:" FontFamily="Avenir" FontSize="22"/>
+        <Frame BorderColor="#70B9BE" CornerRadius="5" Padding="5">
+            <Editor x:Name="instructionsEditor" Placeholder="Tarif" AutoSize="TextChanges" HeightRequest="250" />
+        </Frame>
+
+        <Button Text="Güncelle" Clicked="UpdateRecipeClicked" HorizontalOptions="FillAndExpand" Margin="0,16,0,0" />
+    </StackLayout>
+</ContentPage>

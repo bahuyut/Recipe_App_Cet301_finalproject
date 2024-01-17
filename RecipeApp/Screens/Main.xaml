@@ -18,7 +18,9 @@
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" Padding="10">
                                 <Label Text="{Binding Name}" VerticalOptions="CenterAndExpand" FontFamily="Avenir" FontSize="22" HorizontalOptions="StartAndExpand" />
-                                <Button Text="Sil" Clicked="DeleteRecipeClicked" CommandParameter="{Binding Id}" HorizontalOptions="End" />
+                                <Button Text="Düzenle" Clicked="EditRecipeClicked" CommandParameter="{Binding Id}" HorizontalOptions="End" />
+                                <BoxView Color="Transparent" WidthRequest="8" />
+                                <Button Text="Sil" BackgroundColor="Red" Clicked="DeleteRecipeClicked" CommandParameter="{Binding Id}" HorizontalOptions="End" />
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
